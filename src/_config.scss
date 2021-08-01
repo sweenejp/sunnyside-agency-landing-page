@@ -1,0 +1,93 @@
+//--- Global variables --- //
+
+// colors
+$primary-color-1: hsl(7, 99%, 70%);
+$primary-color-2: hsl(51, 100%, 49%);
+$primary-color-3: hsl(198, 62%, 26%);
+$primary-color-4: hsl(168, 34%, 41%);
+
+$neutral-color-1: hsl(212, 27%, 19%);
+$neutral-color-2: hsl(213, 9%, 39%);
+$neutral-color-3: hsl(232, 10%, 55%);
+$neutral-color-4: hsl(210, 4%, 67%);
+$neutral-color-5: hsl(0, 0%, 100%);
+
+// fonts
+$font-standard: "Barlow", sans-serif;
+$font-alternative: "Fraunces", serif;
+
+// other
+$header-height: 100vh;
+$menu-margin: 35px;
+$line-height: 1.75;
+
+//--- Typography ---//
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+:root {
+  font-size: 18px;
+  font-family: $font-standard;
+  scroll-behavior: smooth;
+}
+
+//--- Mixins ---//
+
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}
+
+@mixin fancy-underline($underline-color) {
+  & {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 25%;
+      border-radius: 50px;
+      background-color: rgba($underline-color, 0.4);
+      left: -5%;
+      right: 0;
+      width: 110%;
+      bottom: 12%;
+      position: absolute;
+      z-index: -1;
+      @include easeOut;
+    }
+
+    &:hover::before {
+      background-color: rgba($underline-color, 1);
+    }
+  }
+}
+
+//--- Animations ---//
+
+// fade in down
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

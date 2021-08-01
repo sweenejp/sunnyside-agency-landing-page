@@ -1,0 +1,122 @@
+//--- hamburger button ---//
+
+.hamburger-btn {
+  position: absolute;
+  z-index: 3;
+  right: $menu-margin;
+  top: $menu-margin;
+  cursor: pointer;
+  @include easeOut;
+
+  &__line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: $neutral-color-5;
+    @include easeOut;
+  }
+
+  // Rotate into X with menu lines
+
+  &--close {
+    transform: rotate(180deg);
+
+    .hamburger-btn__line {
+      // Line 1 - rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      // Line 2 - hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -5px);
+      }
+    }
+  }
+}
+
+//--- rest of menu ---///
+
+.menu {
+  clip-path: polygon(90% 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+  position: absolute;
+  right: $menu-margin;
+  left: $menu-margin;
+  visibility: hidden;
+  text-align: center;
+  top: 80px;
+
+  &--show {
+    visibility: visible;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  &__list {
+    background-color: $neutral-color-5;
+    width: 100%;
+    padding-top: 4em;
+    padding-bottom: 1em;
+  }
+
+  &__list-item {
+    font-size: 0.9rem;
+    margin-bottom: 3em;
+
+    &--current .menu__link {
+      color: $neutral-color-1;
+      border-radius: 50px;
+      background-color: $primary-color-2;
+      padding: 1em 2em;
+      font-family: $font-alternative;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__link {
+    color: $neutral-color-3;
+    transition: background 0.3s ease-out;
+    transition: color 0.3s ease-out;
+    transition: padding 0.3s ease-out;
+
+    &:hover {
+      border-radius: 50px;
+      background-color: $neutral-color-4;
+      color: $neutral-color-1;
+      padding: 1em 2em;
+    }
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
