@@ -1,6 +1,6 @@
 @media screen and (min-width: 600px) {
     .header {
-        background-image: url("/dist/images/desktop/image-header.jpg");
+        background-image: url("images/desktop/image-header.jpg");
     }
 
     .grid {
@@ -17,12 +17,12 @@
             // add grid template areas (egg needs to trade spots with "transform"
 
             &-1 {
-                background-image: url("/dist/images/desktop/image-transform.jpg");
+                background-image: url("images/desktop/image-transform.jpg");
                 grid-area: second;
             }
 
             &-2 {
-                background-image: url("/dist/images/desktop/image-stand-out.jpg");
+                background-image: url("images/desktop/image-stand-out.jpg");
             }
         }
 
@@ -35,16 +35,24 @@
     .services {
         height: unset;
         &-1 {
-            background-image: url("/dist/images/desktop/image-graphic-design.jpg");
+            background-image: url("images/desktop/image-graphic-design.jpg");
         }
 
         &-2 {
-            background-image: url("/dist/images/desktop/image-photography.jpg");
+            background-image: url("images/desktop/image-photography.jpg");
         }
 
         &__main {
             width: 75%;
             margin: 0 auto;
+        }
+    }
+
+    .testimonials {
+        flex-direction: row;
+
+        &__section {
+            padding: 4em;
         }
     }
 
@@ -54,11 +62,21 @@
         grid-template-areas: "img-1 img-2 img-3 img-4";
     }
 
-    .testimonials {
-        flex-direction: row;
+    .footer__img {
+        &-1 {
+            background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+        }
 
-        &__section {
-            padding: 4em;
+        &-2 {
+            background-image: url("images/desktop/image-gallery-orange.jpg");
+        }
+
+        &-3 {
+            background-image: url("images/desktop/image-gallery-cone.jpg");
+        }
+
+        &-4 {
+            background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
         }
     }
 }
