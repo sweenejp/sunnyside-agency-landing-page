@@ -223,7 +223,7 @@ body {
   background-image: url("images/mobile/image-stand-out.jpg");
 }
 .about__main {
-  padding: 2em;
+  padding: 5em;
   line-height: 1.75;
 }
 .about__title {
@@ -408,12 +408,24 @@ body {
 }
 .footer__list-item a {
   color: #3d7b6f;
+  transition: all 0.3s ease-out;
+}
+.footer__list-item a:hover {
+  color: white;
 }
 .footer__list--social {
   margin-bottom: 0px;
+  transition: all 0.3s ease-out;
+}
+.footer__list--social:hover {
+  color: white;
+}
+.footer__links-container {
+  max-width: 425px;
+  margin: auto;
 }
 .footer__social-container {
-  width: 50%;
+  max-width: 300px;
   margin: auto;
 }
 
@@ -424,6 +436,97 @@ body {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    background-image: url("/dist/images/desktop/image-header.jpg");
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(600px, auto);
+    grid-template-areas: "first second";
+  }
+
+  .about__img {
+    height: unset;
+  }
+  .about__img-1 {
+    background-image: url("/dist/images/desktop/image-transform.jpg");
+    grid-area: second;
+  }
+  .about__img-2 {
+    background-image: url("/dist/images/desktop/image-stand-out.jpg");
+  }
+  .about__main {
+    text-align: left;
+    padding-top: 7em;
+  }
+
+  .services {
+    height: unset;
+  }
+  .services-1 {
+    background-image: url("/dist/images/desktop/image-graphic-design.jpg");
+  }
+  .services-2 {
+    background-image: url("/dist/images/desktop/image-photography.jpg");
+  }
+  .services__main {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .footer__imgs {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: unset;
+    grid-template-areas: "img-1 img-2 img-3 img-4";
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 781px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-rows: minmax(400px, auto);
+  }
+}
+@media screen and (min-width: 781px) {
+  .hamburger-btn {
+    display: none;
+  }
+
+  .menu {
+    visibility: visible;
+    left: unset;
+    right: 35px;
+    top: 35px;
+    clip-path: none;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: unset;
+    padding: 0;
+  }
+  .menu__list-item--current .menu__link {
+    background-color: white;
+  }
+  .menu__link {
+    color: white;
+    padding: 1em 2em;
+    border-radius: 50px;
+  }
+  .menu__link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.33);
+    transition: background-color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

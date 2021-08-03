@@ -9,6 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="main.css">
 
+  <script src="https://kit.fontawesome.com/51bf797a88.js" crossorigin="anonymous"></script>
+
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
 </head>
@@ -36,7 +38,7 @@
   </header>
 
   <main id="main" class="main">
-    <div class="about">
+    <div class="about grid">
       <div class="about__img about__img-1"></div>
       <div class="about__main">
         <h2 class="about__title">Transform your brand</h2>
@@ -48,7 +50,7 @@
       </div>
     </div>
 
-    <div class="about">
+    <div class="about grid">
       <div class="about__img about__img-2"></div>
       <div class="about__main">
         <h2 class="about__title">Stand out to the right audience</h2>
@@ -61,16 +63,24 @@
       </div>
     </div>
 
-    <div class="services services-1">
-      <h2 class="services__title">Graphic design</h2>
-      <p class="services__text">Great design makes you memorable. We deliver artwork that underscores your brand message
-        and captures potential clients’ attention.</p>
-    </div>
+    <div class="grid">
+      <div class="services services-1">
+        <div class="services__main">
+          <h2 class="services__title">Graphic design</h2>
+          <p class="services__text">Great design makes you memorable. We deliver artwork that underscores your brand
+            message
+            and captures potential clients’ attention.</p>
+        </div>
+      </div>
 
-    <div class="services services-2">
-      <h2 class="services__title">Photography</h2>
-      <p class="services__text">Increase your credibility by getting the most stunning, high-quality photos that improve
-        your business image.</p>
+      <div class="services services-2">
+        <div class="services__main">
+          <h2 class="services__title">Photography</h2>
+          <p class="services__text">Increase your credibility by getting the most stunning, high-quality photos that
+            improve
+            your business image.</p>
+        </div>
+      </div>
     </div>
 
     <div class="testimonials">
@@ -116,21 +126,19 @@
     </div>
     <div class="footer__main">
       <div class="footer__logo"></div>
-      <ul class="footer__list">
-        <li class="footer__list-item"><a href="#" class="footer__link">About</a></li>
-        <li class="footer__list-item"><a href="#" class="footer__link">Services</a></li>
-        <li class="footer__list-item"><a href="#" class="footer__link">Projects</a></li>
-      </ul>
+      <div class="footer__links-container">
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">About</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Services</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Projects</a></li>
+        </ul>
+      </div>
       <div class="footer__social-container">
         <ul class="footer__list footer__list--social">
-          <li class="footer__list-item"><a href="#" class="footer__link"><img class="footer__social-icon"
-                src="images/icon-facebook.svg" alt="Facebook"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link"><img class="footer__social-icon"
-                src="images/icon-instagram.svg" alt="Instagram"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link"><img class="footer__social-icon"
-                src="images/icon-twitter.svg" alt="Twitter"></a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link"><img class="footer__social-icon"
-                src="images/icon-pinterest.svg" alt="Pinterest"></a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link"><i class="fas fa-archway"></i></a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link"><i class="fas fa-cocktail"></i></a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link"><i class="fas fa-hot-tub"></i></a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link"><i class="fas fa-umbrella-beach"></i></a></li>
       </div>
       </ul>
     </div>

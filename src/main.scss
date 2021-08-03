@@ -71,7 +71,7 @@ body {
   }
 
   &__main {
-    padding: 2em;
+    padding: 5em;
     line-height: $line-height;
   }
 
@@ -246,15 +246,30 @@ body {
 
     &-item a {
       color: darken($primary-color-4, 5);
+      @include easeOut;
+
+      &:hover {
+        color: white;
+      }
     }
 
     &--social {
       margin-bottom: 0px;
+      @include easeOut;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 
+  &__links-container {
+    max-width: 425px;
+    margin: auto;
+  }
+
   &__social-container {
-    width: 50%;
+    max-width: 300px;
     margin: auto;
   }
 }
@@ -267,3 +282,5 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@import "media-querries";
