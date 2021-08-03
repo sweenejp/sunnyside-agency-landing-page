@@ -484,6 +484,13 @@ body {
     grid-template-rows: unset;
     grid-template-areas: "img-1 img-2 img-3 img-4";
   }
+
+  .testimonials {
+    flex-direction: row;
+  }
+  .testimonials__section {
+    padding: 4em;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 781px) {
   :root {
