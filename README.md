@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://www.frontendmentor.io/solutions/mobile-first-site-using-sass-and-bem-R96zOQHdn)
-- Live Site URL: [](https://jsweeney-sunnyside-agency-landing-page.netlify.app/)
+- Solution URL: https://www.frontendmentor.io/solutions/mobile-first-site-using-sass-and-bem-R96zOQHdn
+- Live Site URL: https://jsweeney-sunnyside-agency-landing-page.netlify.app/
 
 ## My process
 
